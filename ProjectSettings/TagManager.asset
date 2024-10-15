@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3362666781
+    locked: 0
+  - name: Plataforma
+    uniqueID: 3728523975
+    locked: 0
+  - name: Jugador
+    uniqueID: 766009421
+    locked: 0
+  - name: Objetos de fondo
+    uniqueID: 2097330117
+    locked: 0
