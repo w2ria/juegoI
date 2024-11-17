@@ -1,0 +1,63 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+
+# Ignore the Library folder
+[Ll]ibrary/
+
+# Ignore temporary files and build directories
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Ignore MemoryCaptures and Recordings
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Ignore Visual Studio and Rider project files
+.vs/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Ignore auto-generated files
+*.tmp
+*.tmp.meta
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+
+# Ignore builds and packages
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Ignore Crashlytics generated files
+crashlytics-build.properties
+
+# Ignore packed Addressables
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Ignore specific temporary assets
+[Aa]ssets/[Ss]treamingAssets/aa.meta
+[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Ignore other IDE-specific folders
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Uncomment if you want to ignore the Asset Store Tools
+# /[Aa]ssets/AssetStoreTools*
