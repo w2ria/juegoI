@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1a951ca961090bb45beb26186427813d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - camera: {instanceID: 0}
+  - spawner: {instanceID: 0}
+  - bulletPrefab: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - shootSound: {instanceID: 0}
+  - reloadSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
