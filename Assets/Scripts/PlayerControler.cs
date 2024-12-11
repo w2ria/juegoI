@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement; 
 using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
@@ -87,6 +88,7 @@ public class PlayerControler : MonoBehaviour
             if (vida <= 0)
             {
                 muerto = true;
+                Invoke("ReiniciarEscena", 2f);
             }
             if (!muerto)
             {
@@ -95,6 +97,12 @@ public class PlayerControler : MonoBehaviour
             }
         }
     }
+
+    public void ReiniciarEscena()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     public void DesactivaDanio()
     {
