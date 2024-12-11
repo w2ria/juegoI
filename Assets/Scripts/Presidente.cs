@@ -3,12 +3,12 @@ using UnityEngine;
 public class Presidente : MonoBehaviour
 {
     public GameObject cuerdas; // Referencia al objeto que quieres ocultar
-    public GameObject agent;   // Referencia directa al objeto Agente
+    public GameObject Agente;   // Referencia directa al objeto Agente
 
     private void OnCollisionEnter(Collision collision)
     {
         // Verifica si el objeto que colisiona es el agente especificado
-        if (collision.gameObject == agent)
+        if (collision.gameObject == Agente)
         {
             if (cuerdas != null)
             {
