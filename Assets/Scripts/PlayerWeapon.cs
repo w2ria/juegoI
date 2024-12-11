@@ -6,19 +6,18 @@ public class PlayerWeapon : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
     public new Camera camera;
-    public Transform spawner;
-    public GameObject bulletPrefab;
+    public Transform spawner;  // Lugar de disparo
+    public GameObject bulletPrefab;  // Prefab de la bala
 
-    public AudioSource audioSource; // Referencia al componente AudioSource
-    public AudioClip shootSound;    // Clip de sonido del disparo
-    public AudioClip reloadSound;   // Clip de sonido de recarga
+    public AudioSource audioSource; 
+    public AudioClip shootSound;   // Sonido del disparo
+    public AudioClip reloadSound;  // Sonido de recarga
 
-    private bool isWeaponVisible = true; // Estado del arma
+    private bool isWeaponVisible = true;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Si no se asigna un AudioSource manualmente, intenta obtenerlo del objeto
         if (audioSource == null) {
             audioSource = GetComponent<AudioSource>();
         }
@@ -48,26 +47,23 @@ public class PlayerWeapon : MonoBehaviour {
     }
 
     private void CheckFiring() {
-        if (Input.GetMouseButtonDown(0)) {
-            // Disparar bala solo si el arma está visible
-            if (isWeaponVisible) {
-                GameObject bullet = Instantiate(bulletPrefab);
-                bullet.transform.position = spawner.position;
-                bullet.transform.rotation = transform.rotation;
-                Destroy(bullet, 2f);
-            }
-
-            // Reproducir el sonido del disparo (independiente de la visibilidad)
-            PlayShootSound();
+        if (isWeaponVisible && Input.GetMouseButtonDown(0)) {
+            FireBullet();
         }
+    }
+
+    private void FireBullet() {
+        GameObject bullet = Instantiate(bulletPrefab);
+        bullet.transform.position = spawner.position;
+        bullet.transform.rotation = transform.rotation;  // La bala tiene la misma rotación que el arma
+
+        PlayShootSound();
     }
 
     private void CheckWeaponVisibility() {
         if (Input.GetKeyDown(KeyCode.R)) {
             isWeaponVisible = !isWeaponVisible;
             spriteRenderer.enabled = isWeaponVisible;
-
-            // Reproducir el sonido de recarga
             PlayReloadSound();
         }
     }
